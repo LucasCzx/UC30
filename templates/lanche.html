@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ lanche.nome }}{% endblock %}
+
+{% block content %}
+<div class="card mx-auto" style="max-width: 500px;">
+    <div class="card-body text-center">
+        <h2 class="text-danger">{{ lanche.nome }}</h2>
+        <hr>
+        <h3 class="mb-4">R$ {{ lanche.preco }}</h3>
+        
+        <button class="btn btn-success btn-lg">
+            Pedir Agora 🥰
+        </button>
+        
+        <br><br>
+        <a href="/cardapio" class="text-muted">← Voltar ao Cardápio</a>
+    </div>
+</div>
+{% endblock %}

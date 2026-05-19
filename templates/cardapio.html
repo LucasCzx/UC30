@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}Cardápio{% endblock %}
+
+{% block content %}
+<h1 class="text-center mb-4">🍔 Nosso Cardápio</h1>
+
+
+{% if lanches %}
+<div class="row">
+    {% for lanche in lanches %}
+    <div class="col-md-3 mb-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+                <h5 class="card-title">{{ lanche.nome }}</h5>
+                <p class="text-danger fw-bold">R$ {{ lanche.preco }}</p>
+                <a href="/lanche/{{ lanche.id }}" class="btn btn-outline-danger">
+                    Ver Detalhes
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<p class="text-center">Tem lanche não!! 😔</p>
+{% endif %}
+
+<a href="/" class="btn btn-secondary">← Voltar ao Início</a>
+{% endblock %}
