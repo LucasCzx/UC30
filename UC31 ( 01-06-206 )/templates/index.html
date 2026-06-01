@@ -1,0 +1,20 @@
+<form method="POST">
+    <input type="text" name="apelido" placeholder="Apelido">
+
+    <select name="jogo">
+        <option value="">Selecione um jogo</option>
+        <option value="Red Dead 2">Red Dead 2</option>
+        <option value="GTA V">GTA V</option>
+        <option value="Minecraft">Minecraft</option>
+    </select>
+
+    <input type="email" name="email" placeholder="E-mail">
+
+    <button type="submit">Inscrever</button>
+</form>
+
+{% with mensagens = get_flashed_messages(with_categories=true) %}
+    {% for categoria, mensagem in mensagens %}
+        <p class="{{ categoria }}">{{ mensagem }}</p>
+    {% endfor %}
+{% endwith %}
