@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caderno de Recados</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h1>Caderno de Recados da Turma</h1>
+
+    <form action="/adicionar" method="POST">
+
+        <input
+            type="text"
+            name="nome"
+            placeholder="Digite seu nome"
+            required
+        >
+
+        <textarea
+            name="mensagem"
+            placeholder="Digite seu recado"
+            rows="4"
+            required
+        ></textarea>
+
+        <button type="submit">Enviar</button>
+
+    </form>
+
+    <h2>Recados</h2>
+
+    <div class="lista-recados">
+        {% for recado in recados %}
+            <div class="recado">
+                <div class="autor">
+                    {{ recado.nome }}
+                </div>
+
+                <div class="mensagem">
+                    {{ recado.mensagem }}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+</body>
+</html>
