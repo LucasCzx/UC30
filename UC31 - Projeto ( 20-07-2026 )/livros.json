@@ -1,0 +1,26 @@
+[
+    {
+        "titulo": "Dom Casmurro",
+        "autor": "Machado de Assis",
+        "ano": "1899",
+        "categoria": "Romance",
+        "quantidade": "5"
+    }
+]
+
+[
+    {
+        "titulo": "Dom Casmurro",
+        "autor": "Machado de Assis",
+        "ano": "1899",
+        "categoria": "Romance",
+        "quantidade": "5"
+    },
+    {
+        "titulo": "O Pequeno Príncipe",
+        "autor": "Antoine de Saint-Exupéry",
+        "ano": "1943",
+        "categoria": "Infantil",
+        "quantidade": "3"
+    }
+]
