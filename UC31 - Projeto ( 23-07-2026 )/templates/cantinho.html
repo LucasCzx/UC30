@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Cantinho</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/cantinho.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Meu Cantinho</h1>
+
+    <h2>Olá, {{ nome }}! Este é o seu cantinho secreto.</h2>
+
+    <div class="card">
+        <p><strong>Cor favorita:</strong> {{ cor }}</p>
+        <p><strong>Linguagem favorita:</strong> {{ linguagem }}</p>
+        <p><strong>Frase:</strong> {{ frase }}</p>
+    </div>
+
+    <a class="botao" href="{{ url_for('painel') }}">
+        ← Voltar ao painel
+    </a>
+
+</div>
+
+</body>
+</html>
